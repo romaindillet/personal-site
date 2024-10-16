@@ -6,7 +6,7 @@ const eleventyNavigation = {
 ---
 # About
 
-I’m a Senior Reporter at TechCrunch.
+I’m a Senior Reporter at [TechCrunch](https://techcrunch.com).
 
 I have written over 3,000 articles on technology and tech startups and have established myself as an influential voice on the European tech scene. I have a deep background in startups, privacy, security, fintech, blockchain, mobile, social and media.
 
