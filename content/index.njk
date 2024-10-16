@@ -6,6 +6,9 @@ const eleventyNavigation = {
 
 const numberOfLatestPostsToShow = 3;
 ---
+<h1>Welcome to my internet home.</h1>
+<p>I’m Romain Dillet, a tech enthusiast and writer. You may know me from <a href="https://techcrunch.com/author/romain-dillet/">my articles for TechCrunch</a>. On this site, I write things that don’t necessarily fit on TechCrunch.</p>
+
 {% set postsCount = collections.posts | length %}
 {% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
 <h1>Latest {{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %}</h1>
