@@ -2,3 +2,5 @@ _site/
 node_modules/
 package-lock.json
 .cache
+content/blog/.Ulysses-Settings.plist
+content/blog/.Ulysses-Group.plist
