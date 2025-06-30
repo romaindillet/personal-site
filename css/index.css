@@ -61,7 +61,7 @@ body {
 }
 
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
-.visually-hidden {
+.visually-hidden:not(:focus):not(:active) {
 	clip: rect(0 0 0 0);
 	clip-path: inset(50%);
 	height: 1px;
@@ -72,7 +72,7 @@ body {
 }
 
 /* Fluid images via https://www.zachleat.com/web/fluid-images/ */
-img {
+img{
   max-width: 100%;
 }
 img[width][height] {
@@ -82,6 +82,14 @@ img[src$=".svg"] {
   width: 100%;
   height: auto;
   max-width: none;
+}
+video,
+iframe {
+	width: 100%;
+	height: auto;
+}
+iframe {
+	aspect-ratio: 16/9;
 }
 
 p:last-child {
@@ -117,10 +125,23 @@ main :first-child {
 header {
 	border-bottom: 1px dashed var(--color-gray-20);
 }
-header:after {
-	content: "";
-	display: table;
-	clear: both;
+
+#skip-link {
+	text-decoration: none;
+	background: var(--background-color);
+	color: var(--text-color);
+	padding: 0.5rem 1rem;
+	border: 1px solid var(--color-gray-90);
+	border-radius: 2px;
+}
+
+/* Prevent visually-hidden skip link fom pushing content around when focused */
+#skip-link.visually-hidden:focus {
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+	/* Ensure it is positioned on top of everything else when it is shown */
+	z-index: 999;
 }
 
 .links-nextprev {
@@ -173,15 +194,16 @@ code {
 /* Header */
 header {
 	display: flex;
-	gap: 1em .5em;
+	gap: 1em;
 	flex-wrap: wrap;
+	justify-content: space-between;
 	align-items: center;
 	padding: 1em;
 }
 .home-link {
+	flex-grow: 1;
 	font-size: 1em; /* 16px /16 */
 	font-weight: 700;
-	margin-right: 2em;
 }
 .home-link:link:not(:hover) {
 	text-decoration: none;
@@ -190,13 +212,13 @@ header {
 /* Nav */
 .nav {
 	display: flex;
+	gap: .5em 1em;
 	padding: 0;
 	margin: 0;
 	list-style: none;
 }
 .nav-item {
 	display: inline-block;
-	margin-right: 1em;
 }
 .nav-item a[href]:not(:hover) {
 	text-decoration: none;
@@ -207,6 +229,7 @@ header {
 
 /* Posts list */
 .postlist {
+	counter-reset: start-from var(--postlist-index);
 	list-style: none;
 	padding: 0;
 	padding-left: 1.5rem;
