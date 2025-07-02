@@ -18,4 +18,4 @@ When I’m not writing, I’m also a developer — I understand how the tech beh
 
 I graduated from Emlyon Business School, a leading French business school specialized in entrepreneurship. I have helped several non-profit organizations, such as StartHer, an organization that promotes education and empowerment of women in technology, and Techfugees, an organization that empowers displaced people with technology.
 
-You can reach me at <a href="mailto:romain@techcrunch.com">romain@techcrunch.com</a>.
+You can contact me on <a href="https://docs.google.com/forms/d/e/1FAIpQLScQ3iqhFyW816etISZe8BRqvtCyelx4VaQIhNQwYWnGgNqvNA/viewform" target="_blank">this page</a>.
