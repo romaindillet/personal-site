@@ -60,12 +60,12 @@ export default async function(eleventyConfig) {
 		type: "atom", // or "rss", "json"
 		outputPath: "/feed/feed.xml",
 		stylesheet: "pretty-atom-feed.xsl",
-		templateData: {
+		/* templateData: {
 			eleventyNavigation: {
 				key: "Feed",
 				order: 4
 			}
-		},
+		}, */
 		collection: {
 			name: "posts",
 			limit: 10,
